@@ -5,21 +5,21 @@
 class Costctl < Formula
   desc "Multi-cloud cost and pricing CLI (Azure spot prices today)"
   homepage "https://github.com/jwmossmoz/costctl"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.0/costctl_0.3.0_darwin_amd64.tar.gz"
-      sha256 "e5fceac69b473cd4a4d6097d0895f266d95618f9d6fa8c8ec7895daee2145b84"
+      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.1/costctl_0.3.1_darwin_amd64.tar.gz"
+      sha256 "88b0bd06ae6b2e07b9b4519e48f1d791c392363fa7e5495d6aa84c763b811fab"
 
       define_method(:install) do
         bin.install "costctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.0/costctl_0.3.0_darwin_arm64.tar.gz"
-      sha256 "612a04d31dc3257783ea1ca40d5eed8ea5c8ab9442076558c99e2cf7c2f064cb"
+      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.1/costctl_0.3.1_darwin_arm64.tar.gz"
+      sha256 "8b9d483be603eca531dc5be383d9f13e48d1ad9cf8757a8982b0708619e95981"
 
       define_method(:install) do
         bin.install "costctl"
@@ -29,15 +29,15 @@ class Costctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.0/costctl_0.3.0_linux_amd64.tar.gz"
-      sha256 "2210875acf784b4336ea994b4dbcd91351b5738e2d2af7fa578af955761e79c0"
+      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.1/costctl_0.3.1_linux_amd64.tar.gz"
+      sha256 "2bd7538384be865c068daac522b118d603e5dbe41c515d1ef2c787bdf3915c46"
       define_method(:install) do
         bin.install "costctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.0/costctl_0.3.0_linux_arm64.tar.gz"
-      sha256 "f62a9704920ec27c4c9f377ca07bae192d48b6b1b8fd6e8525c6aaad527585d8"
+      url "https://github.com/jwmossmoz/costctl/releases/download/v0.3.1/costctl_0.3.1_linux_arm64.tar.gz"
+      sha256 "55ccd552b1a93bceb5bc16ab40e80f180e4d15aeb854af469f579d7efed5d4d7"
       define_method(:install) do
         bin.install "costctl"
       end
