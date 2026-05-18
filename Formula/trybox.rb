@@ -17,10 +17,19 @@ class Trybox < Formula
     sha256 "9ef8d623f549bcc361bd4705e681c918f3c689bca19156600c9afd1db0f47759"
 
     define_method(:install) do
-      bin.install "trybox"
+      if build.head?
+        ldflags = "-s -w -X github.com/jwmossmoz/trybox/internal/cli.Version=#{version}"
+        system "go", "build", *std_go_args(output: bin/"trybox", ldflags: ldflags), "./cmd/trybox"
+      else
+        bin.install "trybox"
+      end
     end
   end
 
+  head do
+    url "https://github.com/jwmossmoz/trybox.git", branch: "main"
+    depends_on "go" => :build
+  end
   depends_on arch: :arm64
 
   test do
