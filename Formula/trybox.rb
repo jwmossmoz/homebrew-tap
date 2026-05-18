@@ -5,7 +5,7 @@
 class Trybox < Formula
   desc "Fresh VM. Dirty checkout. Exact command."
   homepage "https://github.com/jwmossmoz/trybox"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "cirruslabs/cli/tart"
@@ -13,8 +13,8 @@ class Trybox < Formula
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/jwmossmoz/trybox/releases/download/v0.1.0/trybox_0.1.0_darwin_arm64.tar.gz"
-    sha256 "9ef8d623f549bcc361bd4705e681c918f3c689bca19156600c9afd1db0f47759"
+    url "https://github.com/jwmossmoz/trybox/releases/download/v0.1.1/trybox_0.1.1_darwin_arm64.tar.gz"
+    sha256 "68192d7642c95e943a3e33bf50b528d60b8764310850de2942962dd6c0888c6c"
 
     define_method(:install) do
       if build.head?
