@@ -14,7 +14,7 @@ class Trybox < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/jwmossmoz/trybox/releases/download/v0.1.1/trybox_0.1.1_darwin_arm64.tar.gz"
-    sha256 "68192d7642c95e943a3e33bf50b528d60b8764310850de2942962dd6c0888c6c"
+    sha256 "dc7998121e644dbf2455b1270cc9a729a71ad512a30069edf7618fa5c168b241"
 
     define_method(:install) do
       if build.head?
